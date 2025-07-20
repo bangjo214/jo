@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Project ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Video Background -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="video1.mp4" type="video/mp4">
+    </video>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Content -->
+    <div class="content">
+        <h1 id="typing-text"></h1>
+        <div class="buttons">
+            <button id="yes-btn">💖 Yes</button>
+            <button id="no-btn">😅 No Way</button>
+        </div>
+        <div class="music-control">
+            <button id="music-btn">🎵 Play Music</button>
+        </div>
+    </div>
+
+    <!-- Love Effect Container -->
+    <div id="love-container"></div>
+
+    <!-- Popup Message -->
+    <div id="popup" class="hidden">
+        <div class="popup-content">
+            <h2>💘 I Love You! 💘</h2>
+        </div>
+    </div>
+
+    <!-- Audio -->
+    <audio id="bg-music" src="original sound-_musicaldown.com.mp3" loop></audio>
+
+    <script src="main.js"></script>
+</body>
+</html>

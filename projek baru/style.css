@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+/* Video Background */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+    text-align: center;
+    color: white;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: fadeIn 1.5s ease-in;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    min-height: 50px;
+    color: #ffdde1;
+    text-shadow: 2px 2px 5px #000;
+}
+
+/* Tombol */
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#yes-btn {
+    background: linear-gradient(45deg, #ff4b2b, #ff6f61);
+    color: white;
+}
+
+#yes-btn:hover {
+    transform: scale(1.1);
+}
+
+#no-btn {
+    background: #333;
+    color: white;
+}
+
+#no-btn:hover {
+    background: #777;
+}
+
+.music-control {
+    margin-top: 25px;
+}
+
+.music-control button {
+    background: #2bff73;
+    color: black;
+}
+
+/* Efek Hujan Love */
+#love-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.love {
+    position: absolute;
+    font-size: 24px;
+    color: red;
+    animation: fall 5s linear forwards;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-10%); opacity: 1; }
+    100% { transform: translateY(110vh); opacity: 0; }
+}
+
+/* Popup */
+#popup.hidden {
+    display: none;
+}
+
+#popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.popup-content {
+    background: white;
+    color: #ff4b2b;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 28px;
+    animation: popUp 0.8s ease;
+}
+
+@keyframes popUp {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+    button {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+}
